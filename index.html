@@ -4,46 +4,53 @@
   <meta charset="UTF-8">
   <title>Pulsating Dancing Garlic Animation</title>
   <style>
-    /* Style for the header */
-    header {
+    /* Style for the container */
+    .container {
       text-align: center;
-      font-family: Arial, sans-serif;
+      font-family: Impact, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
     
     h1 {
-      font-size: 24px;
-      color: #333;
+      font-size: 50px;
+      color: #d90000;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin: 0;
+    }
+    h2 {
+      font-size: 36px;
+      color: #202020;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin: 0;
     }
     
     /* Style for the garlic image */
     .garlic {
-      width: 150px; /* Adjust initial size as needed */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width: 250px; /* Adjust size as needed */
+      margin-bottom: 20px; /* Spacing between image and text */
       animation: pulse 2s ease-in-out infinite, dance 2s ease-in-out infinite;
     }
     
     /* Keyframes for the pulsating animation */
     @keyframes pulse {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.2); }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
     }
     
     /* Keyframes for the dancing animation */
     @keyframes dance {
-      0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-      25% { transform: translate(-50%, -50%) rotate(-10deg); }
-      75% { transform: translate(-50%, -50%) rotate(10deg); }
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
     }
     
     /* Optional styles for the background */
     body {
       margin: 0;
-      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -53,9 +60,11 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Garlic: know how to use it, or don't use it!</h1>
-  </header>
   <img class="garlic" src="garlic.jpeg" alt="Pulsating Dancing Garlic">
+  <div class="container">
+    <h1>Garlic: know how to use it, or don't use it!</h1>
+    <h2>why should you abuse of my presence in dishes? I'm a delicate vegetable and you should respect me!</h2>
+    
+  </div>
 </body>
 </html>
