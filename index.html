@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dancing Garlic Animation</title>
+  <title>Pulsating Dancing Garlic Animation</title>
   <style>
     /* Style for the garlic image */
     .garlic {
-      width: 150px; /* Adjust size as needed */
+      width: 150px; /* Adjust initial size as needed */
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      animation: dance 2s ease-in-out infinite;
+      animation: pulse 2s ease-in-out infinite, dance 2s ease-in-out infinite;
+    }
+    
+    /* Keyframes for the pulsating animation */
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.2); }
     }
     
     /* Keyframes for the dancing animation */
@@ -33,6 +39,6 @@
   </style>
 </head>
 <body>
-  <img class="garlic" src="garlic.jpeg" alt="Dancing Garlic">
+  <img class="garlic" src="garlic.jpeg" alt="Pulsating Dancing Garlic">
 </body>
 </html>
